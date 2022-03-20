@@ -9,6 +9,9 @@ import {RegisterComponent} from "./component/user-manager/register/register.comp
 import {UserAccountComponent} from "./component/user-manager/user-account/user-account.component";
 import {UploadFirebaseComponent} from "./component/upload-firebase/upload-firebase.component";
 import {CartComponent} from "./component/user-manager/cart/cart.component";
+import {ChatMessageComponent} from "./component/message/chat-message/chat-message.component";
+import {ChatRoomListComponent} from "./component/chat/chat-room-list/chat-room-list.component";
+import {ChatRoomDetailComponent} from "./component/chat/chat-room-detail/chat-room-detail.component";
 
 const routes: Routes = [
   {
@@ -39,6 +42,18 @@ const routes: Routes = [
   },
   {path: 'cart',
     component: CartComponent,
+    canActivate:[AuthGuard]
+  },
+  {path: 'message',
+    component: ChatMessageComponent,
+    canActivate:[AuthGuard]
+  },
+  {path: 'chat-room',
+    component: ChatRoomListComponent,
+    canActivate:[AuthGuard]
+  },
+  {path: 'chat-room-detail/:id',
+    component: ChatRoomDetailComponent,
     canActivate:[AuthGuard]
   },
 ];

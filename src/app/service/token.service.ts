@@ -4,6 +4,7 @@ const TOKEN_KEY = 'Token_Key';
 const NAME_KEY  = 'Name_Key';
 const ROLE_KEY = 'Role_Key';
 const AVATAR_KEY = 'Avatar_Key';
+const ROOMID_KEY = 'RoomId_Key';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +12,17 @@ export class TokenService {
 
   private roles: Array<string> = [];
   constructor() { }
+
+
+  public setRoomId(id: number){
+    window.sessionStorage.removeItem(ROOMID_KEY);
+    // @ts-ignore
+    window.sessionStorage.setItem(ROOMID_KEY,id);
+  }
+  public getRoomId(): number{
+    // @ts-ignore
+    return window.sessionStorage.getItem(ROOMID_KEY);
+  }
   public setUserId(id:number){
     // @ts-ignore
     window.sessionStorage.removeItem(USER_ID);

@@ -25,6 +25,9 @@ export class AuthService {
   updateAvatar(changeAvatar: ChangeAvatar):Observable<any>{
     return this.http.put(this.API_CHANGE_AVATAR,changeAvatar);
   }
+  check(){
+
+  }
   handleError(err: any){
     if (err.error instanceof Error) {
       console.log(`Client-side error: ${err.error.message}`);

@@ -28,6 +28,12 @@
     <mat-icon color="accent">add</mat-icon>
     <span>NEW</span>
   </a>
+<!--  <a *ngIf="isCheckLogin" mat-button class="docs-button" routerLink="/message" aria-label="Angular Material">-->
+<!--    <mat-icon color="accent">chat_bubble_outline</mat-icon>-->
+<!--  </a>-->
+  <a *ngIf="isCheckLogin" mat-button class="docs-button" routerLink="/chat-room" aria-label="Angular Material">
+    <mat-icon color="accent">chat_bubble_outline</mat-icon>
+  </a>
   <div class="flex-spacer"></div>
 
   <img routerLink="/user-account"  class="image" *ngIf="isCheckLogin" [src]="avatar">

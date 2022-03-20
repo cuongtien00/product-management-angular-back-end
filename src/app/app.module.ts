@@ -32,6 +32,9 @@ import {MatTableModule} from "@angular/material/table";
 import { CartComponent } from './component/user-manager/cart/cart.component';
 import {MatListModule} from "@angular/material/list";
 import {MatSelectModule} from "@angular/material/select";
+import { ChatMessageComponent } from './component/message/chat-message/chat-message.component';
+import { ChatRoomListComponent } from './component/chat/chat-room-list/chat-room-list.component';
+import { ChatRoomDetailComponent } from './component/chat/chat-room-detail/chat-room-detail.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import {MatSelectModule} from "@angular/material/select";
     UserAccountComponent,
     UploadFirebaseComponent,
     CartComponent,
+    ChatMessageComponent,
+    ChatRoomListComponent,
+    ChatRoomDetailComponent,
   ],
   imports: [
     BrowserModule,

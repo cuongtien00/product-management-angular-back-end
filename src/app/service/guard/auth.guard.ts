@@ -19,7 +19,7 @@ export class AuthGuard implements CanActivate {
       return true;
     }
     else {
-      alert("Need to login!");
+      alert("Please login!");
       return false;
     }
   }

@@ -44,13 +44,6 @@ export class UploadFirebaseComponent implements OnInit {
             this.check = false;
             this.imageUrl = url;
             this.giveUrl.emit(url)
-            // this.tokenService.setAvatar(url);
-            // let changeAvatar: ChangeAvatar = new ChangeAvatar(url);
-            // console.log('changeAvatar:' + JSON.stringify(changeAvatar));
-            // this.authService.updateAvatar(changeAvatar).subscribe(data => {
-            //   console.log('data: ' + JSON.stringify(data));
-            // });
-            // window.location.reload();
           })
         })).subscribe();
 
